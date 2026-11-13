@@ -221,3 +221,30 @@ dl.gloss div{padding:12px 14px}
 .m-cta .btn{padding:10px}
 .to-top{width:38px;height:38px;right:14px;bottom:72px}
 }
+
+/* ---- simple home page, service grid and service pages ---- */
+.hero-grid{grid-template-columns:1fr}
+.hero-copy{max-width:800px}
+@media (min-width:701px){.hero{padding:96px 0 104px}}
+.paths{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:1100px){.paths{grid-template-columns:1fr 1fr}}
+.path{display:grid;gap:12px;align-content:start;padding:28px 24px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;box-shadow:var(--shadow);text-decoration:none;color:inherit}
+.path:hover{border-color:var(--brand);border-top-color:var(--accent)}
+.path .ico{display:grid;place-items:center;width:46px;height:46px;border-radius:6px;background:var(--accent-soft);color:var(--brand)}
+.path .ico svg{width:23px;height:23px}
+.path h2{font-size:1.4rem}
+.path p{color:var(--muted);font-size:.95rem}
+.path .more{margin-top:6px}
+a.card{text-decoration:none;color:inherit}
+.back{display:inline-flex;align-items:center;gap:8px;width:fit-content;color:var(--deep-muted);text-decoration:none;font-weight:600;font-size:.9rem}
+.back svg{width:16px;height:16px;transform:rotate(180deg)}
+.back:hover{color:#fff}
+.svc-body{display:grid;gap:36px}
+.svc-body h2{font-size:1.4rem;margin-bottom:16px}
+.who{display:grid;gap:4px;max-width:80ch;padding:16px 20px;background:var(--soft);border-left:4px solid var(--accent);border-radius:0 8px 8px 0}
+.steps3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.steps3{grid-template-columns:1fr}}
+a.opt{text-decoration:none;color:var(--ink)}
+a.opt:hover{border-color:var(--brand);color:var(--brand)}
+@media (max-width:700px){.paths{grid-template-columns:1fr;gap:10px}.path{grid-template-columns:38px 1fr;gap:2px 12px;padding:14px 16px}.path .ico{grid-row:1/4;width:38px;height:38px}.path h2{font-size:1.08rem}.path p{font-size:.88rem}.path .more{margin-top:2px}.svc-body{gap:22px}.svc-body h2{font-size:1.15rem;margin-bottom:10px}.who{padding:12px 14px}}
+@media print{.back{display:none}}
