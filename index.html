@@ -12,7 +12,7 @@
 <meta property="og:description" content="Microsoft 365 and cloud solutions: migration, implementation, AI readiness and SharePoint products.">
 <meta property="og:url" content="https://sahrarajabica.github.io/">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"SR-MS Solutions Inc.","url":"https://sahrarajabica.github.io/","description":"Microsoft 365 and cloud solutions, services and consultations: migration, implementation, AI readiness and SharePoint products.","knowsAbout":["Microsoft 365","SharePoint migration","Microsoft Teams","OneDrive","Microsoft 365 Copilot readiness"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"SR-MS Solutions Inc.","url":"https://sahrarajabica.github.io/","description":"Microsoft 365 and cloud solutions, services and consultations: migration, implementation, AI readiness and SharePoint products.","telephone":"+1-647-916-0899","address":{"@type":"PostalAddress","streetAddress":"24 Brightway Crescent","addressLocality":"Richmond Hill","addressRegion":"ON","postalCode":"L4C 4Z9","addressCountry":"CA"},"knowsAbout":["Microsoft 365","SharePoint migration","Microsoft Teams","OneDrive","Microsoft 365 Copilot readiness"]}</script>
 <meta name="description" content="SR-MS Solutions Inc. provides Microsoft 365 and cloud solutions, services and consultations: migration, implementation, AI readiness and SharePoint products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1002,6 +1002,7 @@ h3{font-weight:600;letter-spacing:0}
 <div>
 <a class="logo" href="#home"><svg aria-hidden="true"><use href="#i-logo"/></svg><div><b>SR-MS Solutions</b><span>M365 | Migration | Modern Workplace</span></div></a>
 <p>End-to-end Microsoft 365 and cloud solutions to modernize your workplace and prepare your organization for AI.</p>
+<p>24 Brightway Crescent, Richmond Hill, ON L4C 4Z9<br><a href="tel:+16479160899">(647) 916-0899</a></p>
 </div>
 <div><h4>Services</h4><ul>
 <li><a href="#services" data-scroll="svc-migration">Cloud &amp; Data Migration</a></li>
@@ -1032,7 +1033,7 @@ h3{font-weight:600;letter-spacing:0}
 </footer>
 <script>
 /* ---- Company details: fill these in and the contact page updates itself ---- */
-var COMPANY = { email: "", phone: "", address: "", hours: "", formKey: "14c3f21b-cd0e-436f-9838-b828cf9758c8" };
+var COMPANY = { email: "", phone: "(647) 916-0899", address: "24 Brightway Crescent, Richmond Hill, ON L4C 4Z9", hours: "", formKey: "14c3f21b-cd0e-436f-9838-b828cf9758c8" };
 (function(){
 var VIEWS = ["home","services","products","resources","tools","about","contact","privacy"];
 var current = null;
@@ -1143,7 +1144,9 @@ var cl = document.getElementById("contact-list");
 var li = el("li");
 li.innerHTML = '<svg aria-hidden="true"><use href="#'+r[0]+'"/></svg>';
 if (!r[2]) return;
-var d = el("div"); d.appendChild(el("strong",null,r[1])); d.appendChild(el("small",null, r[2])); li.appendChild(d); cl.appendChild(li);
+var d = el("div"), sm = el("small",null, r[2]);
+if (r[0] === "i-phone"){ var ph = el("a",null,r[2]); ph.href = "tel:+1" + r[2].replace(/\D/g,""); sm.textContent = ""; sm.appendChild(ph); }
+d.appendChild(el("strong",null,r[1])); d.appendChild(sm); li.appendChild(d); cl.appendChild(li);
 });
 if (!cl.children.length){ cl.hidden = true; document.getElementById("reach-h").hidden = true; }
 /* ---- contact form: nothing is transmitted from this page; it prepares a message to send ---- */
