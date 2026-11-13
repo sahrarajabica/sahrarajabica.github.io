@@ -10,7 +10,9 @@ var FQ2=[
 ["Move our files to the cloud","Cloud & Data Migration","svc-migration","We plan the move, map permissions and migrate in verified waves so nobody has to stop working."],
 ["Get more from Teams, SharePoint and OneDrive","Microsoft 365 Implementation","svc-m365","We set up sites, teams and sharing rules that match how you work, then train your people."],
 ["Get ready for Copilot and AI","AI Readiness & Advisory","svc-ai","We check your data, security and people, and fix what would make AI answers wrong or risky."],
-["Control who can access what","Products & Solutions","svc-products","Our access management and governance tools put requests, approvals and reports in one place."],
+["Control who can access what","Products & Solutions","products","Our access management and governance tools put requests, approvals and reports in one place."],
+["Run a project well","Project Management Services","svc-pm","We plan, coordinate and report so your project has an owner and a finish line."],
+["Build our team's IT skills","IT Coaching","svc-coaching","Coaching on real tasks builds skill and confidence at your own pace."],
 ["Not sure yet","Consultations","svc-consult","A single conversation is the quickest way to find the right first step."]
 ];
 var FTIP=["For an individual or a small team, one consultation session is usually the right first step.","With a file server or older SharePoint, an inventory of your sources usually comes first.","Since you already use Microsoft 365, a review of your current setup usually comes first."];
@@ -30,12 +32,12 @@ return h("div",{},[h("span",{class:"fl",text:label}),box]);
 function result(){
 res.textContent="";
 if(st.a==null||st.b==null){res.appendChild(h("span",{text:"Answer both questions and we will suggest where to start."}));return}
-var r=FQ2[st.b],topic=st.b<3?r[1]:"Book a consultation";
+var r=FQ2[st.b],topic=(st.b===3||st.b===6)?"Book a consultation":r[1];
 var summary="I used the service finder on your website.\nAbout us: "+FQ1[st.a]+"\nWhat we want: "+r[0]+"\nSuggested service: "+r[1]+"\n\nPlease contact me to discuss next steps.";
 res.appendChild(h("span",{class:"group-h",text:"Suggested starting point"}));
 res.appendChild(h("h3",{text:r[1]}));
 res.appendChild(h("span",{text:r[3]+" "+FTIP[st.a]}));
-res.appendChild(S.actions([["Book a consultation",function(){S.toContact(topic,summary)},"btn-primary"],["See this service",function(){S.go("services",document.getElementById(r[2]))}]]));
+res.appendChild(S.actions([["Book a consultation",function(){S.toContact(topic,summary)},"btn-primary"],["See this service",function(){S.go(r[2])}]]));
 }
 root.appendChild(h("div",{},[group("a","What best describes you?",FQ1),group("b","What do you want most?",FQ2.map(function(x){return x[0]}))]));
 root.appendChild(h("div",{},[res]));
