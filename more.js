@@ -166,9 +166,32 @@ h("a",{href:"mailto:?subject="+encodeURIComponent("SR-MS Solutions Inc.")+"&body
 h("button",{type:"button",text:"Copy link",onclick:function(){S.copy(this,url)}})]),legal);
 }
 
+/* ---- send the contact form by email through Web3Forms when a form key is configured ---- */
+function sender(){
+var form=$("#contact-form"),C=window.COMPANY||{},key=C.formKey||"";if(!form||!key)return;
+var ready=$("#f-ready"),pre=$("#f-ready-text"),how=$("#f-ready-how"),title=$("h3",ready),acts=$(".cta-actions",ready);
+var btn=$("button[type=submit]",form);btn.firstChild.nodeValue="Send my request";
+var trap=h("input",{type:"checkbox",name:"botcheck",tabindex:"-1",autocomplete:"off","aria-hidden":"true",style:"display:none"});form.appendChild(trap);
+function state(t,p,showMsg){title.textContent=t;how.textContent=p;pre.hidden=!showMsg;acts.hidden=!showMsg}
+form.addEventListener("submit",function(){
+if(ready.hidden)return;
+if(trap.checked){state("Thank you","Your request has been received.",false);return}
+var v=function(id){return $("#"+id).value.trim()},to=v("f-email");
+state("Sending your request…","This takes a few seconds.",false);
+fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:key,subject:"Website request: "+v("f-topic"),from_name:"SR-MS Solutions website",name:v("f-name"),email:to,company:v("f-company"),message:pre.textContent})})
+.then(function(r){return r.json()}).then(function(d){
+if(!d||!d.success)throw new Error("not sent");
+state("Thank you, your request has been sent","We will reply to "+to+" as soon as we can.",false);
+store.set("draft",{});
+}).catch(function(){
+state("We could not send your request automatically","Please try again in a few minutes"+(C.email?", or email the message below to "+C.email+".":". Your message is below so you can copy it."),true);
+});
+});
+}
+
 function bars(){
 subnav("services",$$("#services .svc").map(function(s){return [$("h2",s).textContent,s]}),"Services on this page");
 subnav("tools",[["Readiness check","#tool-ready"],["Copilot checklist","#tool-copilot"],["Brief builder","#tool-brief"],["Wave planner","#tool-waves"]].map(function(t){return [t[0],$(t[1])]}).filter(function(t){return t[1]}),"Tools on this page");
 }
-[finder,waves,bars,titles,prefs,share].forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
+[finder,waves,bars,titles,prefs,share,sender].forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
 })();
