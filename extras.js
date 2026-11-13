@@ -144,7 +144,7 @@ var index=null,box=null,active=0,hits=[];
 function build(){
 index=[];
 $$(".view").forEach(function(v){
-var link=$('.nav a[href="#'+v.id+'"]'),name=link?link.textContent:(v.id==="privacy"?"Privacy":v.id);
+var link=$('.nav a[href="#'+v.id+'"]'),name=link?link.textContent:(v.id==="privacy"?"Privacy":v.id.indexOf("svc-")===0?"Services":v.id);
 $$("h1,h2,h3,summary,dt",v).forEach(function(el){
 var extra="";
 if(el.tagName==="SUMMARY")extra=el.parentNode.textContent;
