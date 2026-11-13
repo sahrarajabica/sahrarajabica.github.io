@@ -234,5 +234,6 @@ $(".cta-actions",ready).appendChild(h("a",{id:"f-mailto",class:"btn btn-ghost",h
 });
 }
 
+window.SRMS={$:$,$$:$$,h:h,store:store,go:go,toContact:toContact,copy:copy,actions:actions};
 [readiness,copilot,brief,search,resources,helpers,contact].forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
 })();
