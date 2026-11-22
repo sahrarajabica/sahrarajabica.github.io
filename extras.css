@@ -250,7 +250,6 @@ a.opt:hover{border-color:var(--brand);color:var(--brand)}
 @media print{.back{display:none}}
 
 /* ---- wordmark logo: the hyphen in SR-MS is a migration arrow ---- */
-.logo .wm{display:inline-flex;align-items:center;gap:5px;font-size:1.35rem;font-weight:800;letter-spacing:-.02em;line-height:1}
-.logo .wm i{font-style:normal;font-weight:600;margin-left:3px}
-.logo .wm-arrow{width:30px;height:19px;flex:none}
-@media (max-width:700px){.logo .wm{font-size:1.12rem;gap:4px}.logo .wm-arrow{width:25px;height:16px}}
+.logo .vx-badge{width:40px;height:40px;flex:none}
+.logo .wm{display:block;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+@media (max-width:700px){.logo .vx-badge{width:34px;height:34px}.logo .wm{font-size:1.25rem}}
