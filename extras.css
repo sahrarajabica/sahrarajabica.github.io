@@ -256,3 +256,9 @@ a.opt:hover{border-color:var(--brand);color:var(--brand)}
 .logo .vx-badge{width:40px;height:40px;flex:none}
 .logo .wm{display:block;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1}
 @media (max-width:700px){.logo .vx-badge{width:34px;height:34px}.logo .wm{font-size:1.25rem}}
+
+/* ---- VEXEN split-V logo ---- */
+.logo .vx-badge{width:46px;height:33px}
+.logo .wm{font-weight:300;font-size:1.3rem;letter-spacing:.32em;text-transform:uppercase;line-height:1}
+.logo .wm+span{margin-top:5px}
+@media (max-width:700px){.logo .vx-badge{width:38px;height:27px}.logo .wm{font-size:1.1rem;letter-spacing:.26em}}
