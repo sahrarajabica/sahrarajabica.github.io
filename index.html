@@ -310,12 +310,15 @@ h3{font-weight:600;letter-spacing:0}
 .view:not([hidden]) .rise{animation:none}
 </style>
 <link rel="stylesheet" href="extras.css?v=11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="pro.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
 <symbol id="i-vx" viewBox="0 0 400 282" fill="currentColor"><path d="M0 0H86Q96 0 101 8L216 188L172 276Z"/><path d="M340 0H400L180 282L298 48Q316 8 340 0Z"/></symbol><symbol id="i-vx-rev" viewBox="0 0 400 282" fill="currentColor"><path d="M0 0H86Q96 0 101 8L216 188L172 276Z"/><path d="M340 0H400L180 282L298 48Q316 8 340 0Z"/></symbol>
+<symbol id="i-wm" viewBox="0 0 344 60" fill="currentColor"><path d="M0 0 15.5 0 34 45 52.5 0 68 0 41.5 60 26.5 60ZM80 0 130 0 130 12 93 12 93 24 126 24 126 36 93 36 93 48 130 48 130 60 80 60ZM142 0 158 0 210 60 194 60ZM194 0 210 0 188.5 24.8 172.5 24.8ZM163.5 35.2 179.5 35.2 158 60 142 60ZM222 0 272 0 272 12 235 12 235 24 268 24 268 36 235 36 235 48 272 48 272 60 222 60ZM284 0 298 0 330 40 330 0 344 0 344 60 330 60 298 20 298 60 284 60Z"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
@@ -336,7 +339,7 @@ h3{font-weight:600;letter-spacing:0}
 <header class="site-head">
 <div class="wrap head-row">
 <a class="logo" href="#home" aria-label="Vexen home">
-<svg class="vx-badge" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg><div><b class="wm">Vexen</b><span>Microsoft 365 &amp; Cloud Solutions</span></div>
+<svg class="vx-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg><span class="vx-div" aria-hidden="true"></span><div class="vx-text"><svg class="vx-word" aria-hidden="true" viewBox="0 0 344 60"><use href="#i-wm"/></svg><span class="vx-tag">Strategy &bull; Technology &bull; Delivery</span></div>
 </a>
 <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
 <nav class="nav" id="nav" aria-label="Main">
@@ -366,7 +369,16 @@ h3{font-weight:600;letter-spacing:0}
 <a class="btn btn-ghost" href="#contact" data-topic="Book a consultation"><svg aria-hidden="true"><use href="#i-cal"/></svg>Book a Consultation</a>
 </div>
 </div>
+<aside class="hero-card" aria-label="How we work">
+<p class="hc-k">How we work</p>
+<ol>
+<li><span class="n">01</span><b>Strategy</b><p>Understand your goals and plan the right Microsoft 365 setup.</p></li>
+<li><span class="n">02</span><b>Technology</b><p>Configure, migrate and secure your tools the right way.</p></li>
+<li><span class="n">03</span><b>Delivery</b><p>Hand over, train your people and support the change.</p></li>
+</ol>
+</aside>
 </div>
+<svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 </section>
 <section class="trust" aria-label="What you can expect">
 <div class="wrap">
@@ -388,10 +400,20 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 </div>
 </section>
+<section class="section soft">
+<div class="wrap">
+<div class="section-head"><p class="label">Strategy &bull; Technology &bull; Delivery</p><h2>One partner from first plan to finished project</h2><p class="lede">Every engagement follows the same three steps, whether it is a single consultation or a full migration.</p></div>
+<div class="pillars">
+<div class="pillar"><span class="n">01</span><h3>Strategy</h3><p>We start with your goals, your current setup and your constraints.</p><ul><li>Assessment of your current tools</li><li>Clear scope and plan</li><li>Readiness for Copilot and AI</li></ul></div>
+<div class="pillar"><span class="n">02</span><h3>Technology</h3><p>We build and configure Microsoft 365 the way your team actually works.</p><ul><li>Migration of files and mail</li><li>SharePoint, Teams and OneDrive setup</li><li>Security and permissions</li></ul></div>
+<div class="pillar"><span class="n">03</span><h3>Delivery</h3><p>We manage the rollout and make sure your people can use what we built.</p><ul><li>Project management</li><li>Training and IT coaching</li><li>Ongoing support</li></ul></div>
+</div>
+</div>
+</section>
 </div>
 <!-- ================= SERVICES ================= -->
 <div class="view" id="services" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Services</p>
 <h1 class="rise">Solutions, services and consultations</h1>
@@ -455,7 +477,7 @@ h3{font-weight:600;letter-spacing:0}
 <div class="view" id="svc-consult" hidden></div>
 <!-- ================= PRODUCTS ================= -->
 <div class="view" id="products" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Products</p>
 <h1 class="rise">Ready-to-use SharePoint and Microsoft 365 solutions</h1>
@@ -495,7 +517,7 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 <!-- ================= RESOURCES ================= -->
 <div class="view" id="resources" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Resources</p>
 <h1 class="rise">Guides for planning your move</h1>
@@ -618,7 +640,7 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 <!-- ================= ABOUT ================= -->
 <div class="view" id="about" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">About us</p>
 <h1 class="rise">A focused Microsoft 365 practice</h1>
@@ -670,7 +692,7 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 <!-- ================= CONTACT ================= -->
 <div class="view" id="contact" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Contact</p>
 <h1 class="rise">Book a consultation</h1>
@@ -732,7 +754,7 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 <!-- ================= TOOLS ================= -->
 <div class="view" id="tools" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Tools</p>
 <h1 class="rise">Free planning tools</h1>
@@ -750,7 +772,7 @@ h3{font-weight:600;letter-spacing:0}
 </div>
 <!-- ================= PRIVACY ================= -->
 <div class="view" id="privacy" hidden>
-<section class="mesh page-head">
+<section class="mesh page-head"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap">
 <p class="label rise">Privacy</p>
 <h1 class="rise">Privacy on this website</h1>
@@ -775,7 +797,7 @@ h3{font-weight:600;letter-spacing:0}
 </section>
 </div>
 </main>
-<section class="cta" id="cta-band">
+<section class="cta" id="cta-band"><svg class="hero-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx"/></svg>
 <div class="wrap"><div class="cta-row">
 <div>
 <h2>Ready to Modernize Your Workplace?</h2>
@@ -791,7 +813,7 @@ h3{font-weight:600;letter-spacing:0}
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo" href="#home" aria-label="Vexen home"><svg class="vx-badge" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx-rev"/></svg><div><b class="wm">Vexen</b><span>Microsoft 365 &amp; Cloud Solutions</span></div></a>
+<a class="logo" href="#home" aria-label="Vexen home"><svg class="vx-mark" aria-hidden="true" viewBox="0 0 400 282"><use href="#i-vx-rev"/></svg><span class="vx-div" aria-hidden="true"></span><div class="vx-text"><svg class="vx-word" aria-hidden="true" viewBox="0 0 344 60"><use href="#i-wm"/></svg><span class="vx-tag">Strategy &bull; Technology &bull; Delivery</span></div></a>
 <p>End-to-end Microsoft 365 and cloud solutions to modernize your workplace and prepare your organization for AI.</p>
 <p>24 Brightway Crescent, Richmond Hill, ON L4C 4Z9<br><a href="tel:+16479160899">(647) 916-0899</a></p>
 </div>
